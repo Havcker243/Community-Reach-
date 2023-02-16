@@ -1,0 +1,125 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta http-equiv="Cache-control" content="public">
+    <meta charset="utf-8">
+    <title>Wesite Demo</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="form.js"></script>
+
+    <link rel="stylesheet" href="css/form-page.css">
+
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <div>
+            <ul>
+                <li><a href="home-page.html">Home</a></li>
+                <li><a href="form.html">Host an Event</a></li>
+                <li><a href="location-page.html">Location Finder</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="categories.html">Trending Events</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="bg-img" style="margin-top: -17px;">
+        <div class="container">
+            <form id="form" action="success.html" target="_blank">
+                <h1>Registration</h1>
+                <div class="input-control">
+                    <label for="eventname">Event name</label>
+                    <input id="eventname" name="eventname" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="location">Location</label>
+                    <input id="location" name="location" type="text">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="time">Time</label>
+                    <input id="time"name="time" type="datetime-local" min="2023-01-01T00:00">
+                    <div class="error"></div>
+                </div>
+               
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCmdamDmGtFwQlYTBtlkY0pJnKbDDXR8HE",
+          authDomain: "eventform-bd6e8.firebaseapp.com",
+          databaseURL: "https://eventform-bd6e8-default-rtdb.firebaseio.com",
+          projectId: "eventform-bd6e8",
+          storageBucket: "eventform-bd6e8.appspot.com",
+          messagingSenderId: "1060835216985",
+          appId: "1:1060835216985:web:272d8e2bada7aeb2cd2b48"
+        };
+      
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import {getDatabase, ref, get, set, child, update, remove}
+        from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+        var id = 1;
+        const db = getDatabase();
+        
+        
+       
+        var eventname = document.querySelector('#eventname');
+        var location = document.querySelector('#location');
+        var time = document.querySelector('#time');
+        
+
+        var submitBtn = document.querySelector('#submit')
+
+        function submitForm(){
+            
+            var dbRef = ref(db, 'list/' + id);
+            if(eventname.value ==="" || location.value === "" || time.value === ""){
+           
+                alert("Please fill the form")
+            }
+            
+            else{
+                set(dbRef,{
+                
+                Event: eventname.value,
+                Location: location.value,
+                Time: time.value
+            })
+            .then(()=>{
+                alert("Data added successfully");
+                window.open("success.html")
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+                document.getElementById('form').reset();
+                id++;
+            }
+           
+        }
+        
+        submitBtn.addEventListener('click', submitForm);
+        
+
+      </script>
+</body>
+
+</html>
