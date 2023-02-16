@@ -1,4 +1,5 @@
 #Community Reach
+
 Community Reach is a website created by a team of developers during a hackathon. The website serves as a platform for individuals within a community or neighborhood to browse and stay informed about the latest events happening in their area. Events can range from parties, clubs, hackathons, birthday parties, and more. The website also collects information from people who want to post their events on the platform, making it easier for the community to be notified about the events.
 
 #Technologies Used
