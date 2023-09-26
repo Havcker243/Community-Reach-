@@ -1,7 +1,0 @@
-"scripts": 
-{
-    "minify:js": "uglifyjs src/js/app.js -o dist/js/app.min.js",
-    "minify:css": "cssnano src/css/styles.css dist/css/styles.min.css",
-    "optimize:images": "imagemin src/images/* --out-dir=dist/images",
-    "build": "npm run minify:js && npm run minify:css && npm run optimize:images"
-  }
