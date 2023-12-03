@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +5,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
 html {
     scroll-behavior: smooth;
 }
-
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     z-index: -1;
-
 }
 
 .input-control {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,28 +31,22 @@ html {
 }
 
 nav {
-
     background: black;
     display: flex;
     align-items: center;
     height: 90px;
     width: 100%;
     font-size: 20px;
-
     align-content: center;
     justify-content: center;
     padding: 10px;
     flex-wrap: wrap;
-
 }
 
-
 nav ul {
-
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-
 }
 
 nav ul li a {
@@ -84,18 +78,16 @@ nav li:hover::after {
 .bg-img {
     content: "";
     background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.5)), url("../img/working.jpg");
-    height: 100vh;
-    width: 100%;
-    background-position: center;
+    background-position:center;
+    position: relative;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     border: 0px;
     z-index: -1;
 }
 
-
-
-/* Form input styles */
+/* Form input and textarea styles */
 form input,
 form textarea,
 form select {
@@ -107,12 +99,17 @@ form select {
     border: 1px solid #ccc;
 }
 
+/* Textarea specific styles */
+form textarea {
+    resize: vertical; /* Allows vertical resizing, you can change it to horizontal or both if needed */
+    min-height: 80px; /* Sets a minimum height for textarea */
+}
+
 /* Form label styles */
 form label {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
-    
 }
 
 /* Form button styles */
@@ -132,18 +129,14 @@ form button:hover {
     background-color: #0056b3;
 }
 
-
-
-
-
 #form {
     width: 400px;
     margin-top: 150px;
     padding: 20px;
-    
-    background-color: whitesmoke;
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     font-size: 12px;
+    overflow: auto;
 }
 
 #form h1 {
@@ -166,7 +159,8 @@ form button:hover {
     flex-direction: column;
 }
 
-.input-control input {
+.input-control input,
+.input-control textarea {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -175,15 +169,18 @@ form button:hover {
     width: 100%;
 }
 
-.input-control input:focus {
+.input-control input:focus,
+.input-control textarea:focus {
     outline: 0;
 }
 
-.input-control.success input {
+.input-control.success input,
+.input-control.success textarea {
     border-color: #09c372;
 }
 
-.input-control.error input {
+.input-control.error input,
+.input-control.error textarea {
     border-color: #ff3860;
 }
 

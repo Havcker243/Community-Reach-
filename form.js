@@ -1,60 +1,33 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('form');
 
-const form = document.getElementById('form');
-const eventname = document.getElementById('eventname');
-const location1 = document.getElementById('location');
-const time = document.getElementById('time');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
+        var formData = {
+            eventname: document.getElementById('eventname').value,
+            eventdescription: document.getElementById('eventdescription').value,
+            capacity: document.getElementById('capacity').value,
+            city: document.getElementById('city').value,
+            address: document.getElementById('address').value,
+            event_date: document.getElementById('event_date').value,
+            coordinator_email: document.getElementById('coordinator_email').value,
+            coordinator_phone: document.getElementById('coordinator_phone').value,
+            vendor_name: document.getElementById('vendor_name').value,
+            vendor_description: document.getElementById('vendor_description').value,
+            vendor_email: document.getElementById('vendor_email').value,
+            vendor_phone: document.getElementById('vendor_phone').value
+        };
 
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
+        submitFormData(formData);
+    });
 });
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+function submitFormData(formData) {
+    console.log('Submitting form data:', formData);
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
+    // Here you can handle the formData
+    // For example, sending it to a server using fetch or XMLHttpRequest
+    // Or any other processing you need to perform
 }
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
-
-
-
-const validateInputs = () => {
-    const eventnameValue = eventname.value.trim();
-    const locationValue = location1.value.trim();
-    const timeValue = time.value.trim();
-
-
-    if (eventnameValue === '') {
-        setError(eventname, 'Event name is required');
-    } else {
-        setSuccess(eventname);
-    }
-
-    if (locationValue === '') {
-        setError(location1, 'Location is required');
-    } else {
-        setSuccess(location1);
-    }
-
-    if (timeValue === '') {
-        setError(time, 'Event time is required');
-
-    } else {
-        setSuccess(time);
-    }
-
-};

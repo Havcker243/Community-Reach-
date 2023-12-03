@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="form.html">Host an Event</a></li>
-                <li><a href="location-page.html">Location Finder</a></li>
+                <li><a href="location-page.html">Event Finder</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="categories.html">Trending Events</a></li>
             </ul>
@@ -29,97 +29,123 @@
     <div class="bg-img" style="margin-top: -17px;">
         <div class="container">
             <form id="form" action="success.html" target="_blanks">
-                <h1>Registration</h1>
+                <h1>Event Registration</h1>
+                
+                <!-- Event Name -->
                 <div class="input-control">
-                    <label for="eventname">Event name</label>
+                    <label for="eventname">Event Name</label>
                     <input id="eventname" name="eventname" type="text">
                     <div class="error"></div>
                 </div>
+            
+                <!-- Event Description -->
                 <div class="input-control">
-                    <label for="location">Location</label>
-                    <input id="location" name="location" type="text">
+                    <label for="eventdescription">Event Description</label>
+                    <textarea id="eventdescription" name="eventdescription"></textarea>
                     <div class="error"></div>
                 </div>
+            
+                <!-- Event Capacity -->
                 <div class="input-control">
-                    <label for="time">Time</label>
-                    <input id="time"name="time" type="datetime-local" min="2023-01-01T00:00">
+                    <label for="capacity">Capacity</label>
+                    <input id="capacity" name="capacity" type="number">
                     <div class="error"></div>
                 </div>
-               
+            
+                <!-- Event City -->
+                <div class="input-control">
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text">
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Event Address -->
+                <div class="input-control">
+                    <label for="address">Address</label>
+                    <input id="address" name="address" type="text">
+                    <div class="error"></div>
+                </div>
+                <!--Event date -->
+                <div class="input-control">
+                    <label for="event_date">Event Date</label>
+                    <input id="event_date" name="event_date" type="date">
+                    <div class="error"></div>
+                </div>
+                
+                <!-- Event Coordinator Email -->
+                <div class="input-control">
+                    <label for="coordinator_email">Coordinator Email</label>
+                    <input id="coordinator_email" name="coordinator_email" type="email">
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Event Coordinator Phone Number -->
+                <div class="input-control">
+                    <label for="coordinator_phone">Coordinator Phone</label>
+                    <input id="coordinator_phone" name="coordinator_phone" type="tel">
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Vendor Name -->
+                <div class="input-control">
+                    <label for="vendor_name">Vendor Name</label>
+                    <input id="vendor_name" name="vendor_name" type="text">
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Vendor Description -->
+                <div class="input-control">
+                    <label for="vendor_description">Vendor Description</label>
+                    <textarea id="vendor_description" name="vendor_description"></textarea>
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Vendor Contact Email -->
+                <div class="input-control">
+                    <label for="vendor_email">Vendor Email</label>
+                    <input id="vendor_email" name="vendor_email" type="email">
+                    <div class="error"></div>
+                </div>
+            
+                <!-- Vendor Contact Phone -->
+                <div class="input-control">
+                    <label for="vendor_phone">Vendor Phone</label>
+                    <input id="vendor_phone" name="vendor_phone" type="tel">
+                    <div class="error"></div>
+                </div>
+                
                 <button id="submit" type="submit">Submit</button>
             </form>
+            
         </div>
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
 
+                var formData = {
+                    eventname: document.getElementById('eventname').value,
+                    eventdescription: document.getElementById('eventdescription').value,
+                    capacity: document.getElementById('capacity').value,
+                    city: document.getElementById('city').value,
+                    address: document.getElementById('address').value,
+                    event_date: document.getElementById('event_date').value,
+                    coordinator_email: document.getElementById('coordinator_email').value,
+                    coordinator_phone: document.getElementById('coordinator_phone').value,
+                    vendor_name: document.getElementById('vendor_name').value,
+                    vendor_description: document.getElementById('vendor_description').value,
+                    vendor_email: document.getElementById('vendor_email').value,
+                    vendor_phone: document.getElementById('vendor_phone').value
+                };
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyCmdamDmGtFwQlYTBtlkY0pJnKbDDXR8HE",
-          authDomain: "eventform-bd6e8.firebaseapp.com",
-          databaseURL: "https://eventform-bd6e8-default-rtdb.firebaseio.com",
-          projectId: "eventform-bd6e8",
-          storageBucket: "eventform-bd6e8.appspot.com",
-          messagingSenderId: "1060835216985",
-          appId: "1:1060835216985:web:272d8e2bada7aeb2cd2b48"
-        };
-      
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-
-        import {getDatabase, ref, get, set, child, update, remove}
-        from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
-        var id = 1;
-        const db = getDatabase();
-        
-        
-       
-        var eventname = document.querySelector('#eventname');
-        var location = document.querySelector('#location');
-        var time = document.querySelector('#time');
-        
-
-        var submitBtn = document.querySelector('#submit')
-
-        function submitForm(){
-            
-            var dbRef = ref(db, 'list/' + id);
-            if(eventname.value ==="" || location.value === "" || time.value === ""){
-           
-                alert("Please fill the form")
-            }
-            
-            else{
-                set(dbRef,{
-                
-                Event: eventname.value,
-                Location: location.value,
-                Time: time.value
-            })
-            .then(()=>{
-                alert("Data added successfully");
-                window.open("success.html")
-            })
-            .catch((error)=>{
-                alert(error);
+                console.log('Form Data:', formData);
+                // Here you can handle the formData, like sending it to a server
             });
-                document.getElementById('form').reset();
-                id++;
-            }
-           
-        }
-        
-        submitBtn.addEventListener('click', submitForm);
-        
-
-      </script>
+        });
+    </script>
 </body>
 
 </html>
