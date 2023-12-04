@@ -28,7 +28,7 @@ The website consists of five key pages:
 
 ### Progress
 
-1. Currently working on the Host event page and finding the event page
+1. Currently working on the host event page and find the event page
 2. Connecting the website to a database to handle and store events 
 3. Currently enhancing visuals, ensuring compatibility across phones, laptops, and iPads.
 4. Transitioning the codebase to React for more dynamic interactions
