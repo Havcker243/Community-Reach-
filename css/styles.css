@@ -176,4 +176,20 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+    .hero-main-page {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+    .main-content h1 {
+        font-size: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    /* Other responsive styles... */
+}
+
+
+
 /* updating css file*/
