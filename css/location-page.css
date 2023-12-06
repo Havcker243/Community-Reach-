@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.5)),
+    url("../img/working.jpg");
+  height: 150vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0px;
+  /* filter:brightness(70%); */
+}
+nav {
+  background: black;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: auto;
+  font-size: 20px;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+  border-bottom: 5px;
+}
+
+nav li:hover::after {
+  width: 75%;
+}
+
+.hero-main-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 35px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 50px;
+  color: white;
+}
+
+Form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#searchForm {
+  width: 400px;
+  margin-top: 150px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  font-size: 12px;
+  overflow: auto;
+}
+
+#searchForm h2 {
+  color: #0f2027;
+  text-align: center;
+}
+
+/* Hover effect for the submit button */
+.search-form button {
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+}
+
+.search-form button:hover {
+  background-color: #4caf50; /* Change background color on hover */
+}
+
+.search-form button {
+  width: 100%;
+  background-color: #007bff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+/* Hover effect for input fields */
+select {
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+select:hover {
+  background-color: #f2f2f2; /* Change background color on hover */
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.search-form input[type="text"],
+.search-form input[type="date"],
+.search-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#searchResults {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .search-form,
+  #searchResults {
+    margin: 1em;
+    padding: 15px;
+  }
+  select {
+    margin-bottom: 15px;
+  }
+}

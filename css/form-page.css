@@ -19,7 +19,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+   
 }
 
 .input-control {
@@ -84,11 +84,9 @@ nav li:hover::after {
     background-repeat: no-repeat;
     background-size: cover;
     border: 0px;
-    z-index: -1;
 }
 
-/* Form input and textarea styles */
-form input,
+/* Form input and textarea styles */form input,
 form textarea,
 form select {
     width: 100%;
@@ -101,8 +99,8 @@ form select {
 
 /* Textarea specific styles */
 form textarea {
-    resize: vertical; /* Allows vertical resizing, you can change it to horizontal or both if needed */
-    min-height: 80px; /* Sets a minimum height for textarea */
+    resize: horizontal; /* Allows vertical resizing, you can change it to horizontal or both if needed */
+    min-height: 90px; /* Sets a minimum height for textarea */
 }
 
 /* Form label styles */
@@ -110,23 +108,6 @@ form label {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
-}
-
-/* Form button styles */
-form button {
-    width: 100%;
-    background-color: #007bff;
-    color: #fff;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Form button hover styles */
-form button:hover {
-    background-color: #0056b3;
 }
 
 #form {
@@ -154,6 +135,15 @@ form button:hover {
     border-radius: 4px;
 }
 
+/* Hover effect for the submit button */
+button#submit {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+}
+
+button#submit:hover {
+    background-color: #4CAF50; /* Change background color on hover */
+}
+
 .input-control {
     display: flex;
     flex-direction: column;
@@ -179,13 +169,14 @@ form button:hover {
     border-color: #09c372;
 }
 
-.input-control.error input,
-.input-control.error textarea {
-    border-color: #ff3860;
+/* Hover effect for input fields */
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="tel"], textarea {
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+input[type="text"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="email"]:hover, input[type="tel"]:hover, textarea:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
 }
+
+
+
