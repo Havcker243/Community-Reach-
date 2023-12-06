@@ -1,6 +1,15 @@
+// Form submission event listener
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission
 
+  // Check if word count in textareas is valid before submitting
+  if (
+    !isWordCountValid("eventdescription", 150) ||
+    !isWordCountValid("vendor_description", 150)
+  ) {
+    alert("One or more text areas have exceeded the word limit.");
+    return; // Stop form submission
+  }
   // Collect form data
   var formData = {
     eventname: document.getElementById("eventname").value,
@@ -38,18 +47,24 @@ document.getElementById("form").addEventListener("submit", function (event) {
     });
 });
 
-
+// Function to enforce word limit on textareas
 function addWordLimitListener(textareaId, messageDivId) {
-    document.getElementById(textareaId).addEventListener('input', function() {
-        var wordCount = this.value.split(/\s+/).filter(function(word) { return word.length > 0 }).length; // Count words
-        if (wordCount > 150) {
-            // Display a message if word count exceeds 150
-            document.getElementById(messageDivId).textContent = 'Word count exceeds the 150-word limit.';
-        } else {
-            document.getElementById(messageDivId).textContent = ''; // Clear message when within limit
-        }
-    });
+  document.getElementById(textareaId).addEventListener("input", function () {
+    var wordCount = this.value.split(/\s+/).filter((word) => word.length > 0)
+      .length;
+    document.getElementById(messageDivId).textContent =
+      wordCount > 150 ? "Word count exceeds the 150-word limit." : "";
+  });
 }
 
-addWordLimitListener('event_description', 'eventWordLimitMessage');
-addWordLimitListener('vendor_description', 'vendorWordLimitMessage');
+// Utility function to check if word count is within limit
+function isWordCountValid(textareaId, limit) {
+  var textContent = document.getElementById(textareaId).value;
+  var wordCount = textContent.split(/\s+/).filter((word) => word.length > 0)
+    .length;
+  return wordCount <= limit;
+}
+
+// Adding word limit listeners to textareas
+addWordLimitListener("eventdescription", "eventWordLimitMessage");
+addWordLimitListener("vendor_description", "vendorWordLimitMessage");
