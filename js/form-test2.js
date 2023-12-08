@@ -20,7 +20,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     };
 
     // Send the request to the API Gateway endpoint
-    fetch('communityreach.cjhjdylaa27o.us-west-2.rds.amazonaws.com', requestOptions)
+    fetch('', requestOptions)
         .then(response => response.json())
         .then(data => console.log('Success:', data))
         .catch((error) => console.error('Error:', error));
@@ -28,8 +28,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
 AWS.config.update({
     region: 'us-west-2b', 
-    accessKeyId: 'AKIA2HFIKCI7GYBDCUTV',
-    secretAccessKey: '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'
+    accessKeyId: '',
+    secretAccessKey: ''
 });
 
 const rds = new AWS.RDS();
@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Form Data:', formData);
 
         const params1 = {
-            resourceARN: 'arn:aws:rds:us-west-2:702580134462:db:communityreach', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
-            secretARN: 'arn:aws:secretsmanager:us-west-2:702580134462:secret:submission-fw8EXk', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
-            database: 'commuityreach', // e.g., 'my-database'
+            resourceARN: '', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
+            secretARN: '', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
+            database: '', // e.g., 'my-database'
             sql: `INSERT INTO events (EventName, EventDescription, Capacity, eventdate) VALUES (?, ?, ?, ?);`,
             parameters: [
                 { name: 'eventname', value: { stringValue: formData.eventname } },
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         const params2 = {
-            resourceARN: 'arn:aws:rds:us-west-2:702580134462:db:communityreach', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
-            secretARN: 'arn:aws:secretsmanager:us-west-2:702580134462:secret:submission-fw8EXk', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
-            database: 'commuityreach', // e.g., 'my-database'
+            resourceARN: '', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
+            secretARN: '', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
+            database: '', // e.g., 'my-database'
             sql: `INSERT INTO vendors (VendorName, VendorDescription, VendorEmail, VendorPhone) VALUES (?, ?, ?, ?);`,
             parameters: [
                 { name: 'VendorName', value: { stringValue: formData.vendor_name } },
@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         const params3 = {
-            resourceARN: 'arn:aws:rds:us-west-2:702580134462:db:communityreach', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
-            secretARN: 'arn:aws:secretsmanager:us-west-2:702580134462:secret:submission-fw8EXk', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
-            database: 'commuityreach', // e.g., 'my-database'
+            resourceARN: '', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
+            secretARN: 'k', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
+            database: '', // e.g., 'my-database'
             sql: `INSERT INTO Event_Coordinator (CoordinatorEmail, CoordinatorPhone) VALUES (?, ?);`,
             parameters: [
                 { name: 'CoordinatorEmail', value: { stringValue: formData.coordinator_email } },
@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         const params4 = {
-            resourceARN: 'arn:aws:rds:us-west-2:702580134462:db:communityreach', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
-            secretARN: 'arn:aws:secretsmanager:us-west-2:702580134462:secret:submission-fw8EXk', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
-            database: 'commuityreach', // e.g., 'my-database'
+            resourceARN: '', // e.g., 'arn:aws:rds:west-2:702580134462:db:communityreach'
+            secretARN: '', // e.g., 'arn:aws:secretsmanager:us-west-2:123456789012:secret:my-db-secret-xxxxxx'
+            database: '', // e.g., 'my-database'
             sql: `INSERT INTO Location (city, address) VALUES (?, ?);`,
             parameters: [
                 { name: 'city', value: { stringValue: formData.city } },
