@@ -3,11 +3,11 @@ const mysql = require('mysql');
 const app = express();
 
 const connection = mysql.createConnection({
-  host: 'communityreach.cjhjdylaa27o.us-west-2.rds.amazonaws.com',
-  port: '3306',
-  user: 'admin',
-  password: 'qdpvyQzjF84RU0bx74bf',
-  database: 'commuityreach'
+  host: '',
+  port: '',
+  user: '',
+  password: '',
+  database: ''
 });
 
 connection.connect();
