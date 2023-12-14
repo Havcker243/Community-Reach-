@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em;
+}
+
+nav {
+    background: black;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+    border-bottom: 5px;
+}
+
+nav li:hover::after {
+    width: 75%;
+}
+
+.bg-img {
+    content: "";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.5)), url("../img/working.jpg");
+    background-position:center;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0px;
+}
+
+/* Form input and textarea styles */form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Textarea specific styles */
+form textarea {
+    resize: horizontal; /* Allows vertical resizing, you can change it to horizontal or both if needed */
+    min-height: 90px; /* Sets a minimum height for textarea */
+}
+
+/* Form label styles */
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#form {
+    width: 400px;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 12px;
+    overflow: auto;
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+/* Hover effect for the submit button */
+button#submit {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+}
+
+button#submit:hover {
+    background-color: #4CAF50; /* Change background color on hover */
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input,
+.input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus,
+.input-control textarea:focus {
+    outline: 0;
+}
+
+.input-control.success input,
+.input-control.success textarea {
+    border-color: #09c372;
+}
+
+/* Hover effect for input fields */
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="tel"], textarea {
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="email"]:hover, input[type="tel"]:hover, textarea:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+
+
