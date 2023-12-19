@@ -1,0 +1,204 @@
+/* General reset styles for margin, padding, and box-sizing to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Default font family set to 'Poppins' */
+}
+
+/* Responsive design settings for when the viewport width is 768px or less */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make container width 90% of the viewport */
+    }
+}
+@media screen and (max-width: 768px) {
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+
+/* Smooth scrolling effect for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling for a generic container to center its content both horizontally and vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for elements with class .input-control to structure form inputs */
+.input-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background: black;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap; /* Allows nav items to wrap on small screens */
+}
+
+/* Styling for unordered list in the navigation bar */
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows list items to wrap */
+    list-style: none; /* Removes default list item bullets */
+}
+
+/* Styling for links in the navigation bar */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Transition for hover effects */
+}
+
+/* Hover effect for navigation links */
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.3s; /* Transition for the underline effect */
+    border-bottom: 5px;
+}
+
+/* Underline effect grows to 75% width on hover */
+nav li:hover::after {
+    width: 75%;
+}
+
+/* Background image styling for a div */
+.bg-img {
+    content: "";
+    background-image: url("../img/working.jpg"); /* Path to the background image */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styling for form input elements, textarea, and select dropdowns */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Specific styles for textareas, allowing only vertical resizing */
+form textarea {
+    resize: vertical;
+    min-height: 90px; /* Minimum height set for textareas */
+}
+
+/* Label styling for form elements */
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Container styling for the form */
+#form {
+    width: 400px;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 12px;
+    overflow: auto;
+}
+
+/* Styling for the heading inside the form */
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+/* Styling for the submit button in the form */
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+/* Transition effect for the submit button on hover */
+button#submit {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Change background color of the submit button on hover */
+button#submit:hover {
+    background-color: #4CAF50;
+}
+
+/* Repeated styles for .input-control; consider consolidating with the earlier .input-control rule */
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input,
+.input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus,
+.input-control textarea:focus {
+    outline: 0;
+}
+
+.input-control.success input,
+.input-control.success textarea {
+    border-color: #09c372;
+}
+
+/* Hover effect for input fields */
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="tel"], textarea {
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="email"]:hover, input[type="tel"]:hover, textarea:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+
+

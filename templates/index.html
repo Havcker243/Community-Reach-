@@ -1,0 +1,39 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Local eventfinder web application</title>
+</head>
+
+<body>
+  <nav id="nav-bar">
+    <div>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('form') }}">Host Event</a></li>
+        <li><a href="{{ url_for('location') }}">Event Finder</a></li>
+        <li><a href="{{ url_for('events') }}">Events</a></li>
+        <li><a href="{{ url_for('categories') }}">Trending Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="bg-img">
+    <section class="hero-main-page">
+      <h2>WELCOME TO</h2>
+      <h1>COMMUNITY REACH</h1>
+      <button id="find-event"><a href="{{ url_for('location') }}" class="button">Find a Local Event</a></button>
+      <button id="host-event"><a href="{{ url_for('form') }}" class="button">Host an Event</a></button>
+      
+    </section>
+  </div>
+
+</body>
+
+</html>

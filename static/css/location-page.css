@@ -1,0 +1,238 @@
+/* Reset all elements to remove margins, paddings, and set box-sizing to border-box for consistent element sizing. Set a default font family. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Enables smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sets up a flex container with centered content for .container class */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background styling for a div with .bg-img class, with a gradient overlay on a background image */
+.bg-img {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.5)),
+    url("../img/working.jpg");
+  height: 150vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0px;
+  /* filter:brightness(70%); Uncomment to adjust brightness */
+}
+
+/* Styling for the navigation bar */
+nav {
+  background: black;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: auto;
+  font-size: 20px;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* Flex container for list items in navigation to manage wrapping */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+/* Styling for links in the navigation bar with a hover effect */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Animated underline effect for navigation items on hover */
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+/* Expands the underline effect on hover */
+nav li:hover::after {
+  width: 75%;
+}
+
+/* Centered title style for the main page */
+.hero-main-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 35px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 50px;
+  color: white;
+}
+
+/* Styles for labels in forms, aligned center */
+Form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Styling for the search form with a semi-transparent background */
+#searchForm {
+  width: 400px;
+  margin-top: 150px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  font-size: 12px;
+  overflow: auto;
+}
+
+/* Text styling for the h2 element within the search form */
+#searchForm h2 {
+  color: #0f2027;
+  text-align: center;
+}
+
+/* Transition effect for button inside .search-form class on hover */
+.search-form button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Changes the background color of button when hovered */
+.search-form button:hover {
+  background-color: #4caf50;
+}
+
+/* Styling for buttons in the search form */
+.search-form button {
+  width: 100%;
+  background-color: #007bff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+/* Transition effect for select dropdowns on hover */
+select {
+  transition: background-color 0.3s ease;
+}
+
+/* Background color change for select dropdowns on hover */
+select:hover {
+  background-color: #f2f2f2;
+}
+
+/* Container styling for the search form with a maximum width and centered alignment */
+.search-form {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling and alignment for h2 element within the search form */
+.search-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Block display and margin for labels within the search form */
+.search-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input, date, and select element styling within the search form */
+.search-form input[type="text"],
+.search-form input[type="date"],
+.search-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Styling for search results and select elements */
+#searchResults,
+.search-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-main-page {
+      font-size: 24px;
+      padding: 0 10px;
+  }
+  .main-content h1 {
+      font-size: 30px;
+  }
+  nav ul li a {
+      font-size: 20px;
+  }
+}
+/* Container styling for the search results */
+#searchResults {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for screens with a maximum width of 768px, adjusts the margin and padding for search form and results */
+@media screen and (max-width: 768px) {
+  .search-form,
+  #searchResults {
+    margin: 1em;
+    padding: 15px;
+  }
+  select {
+    margin-bottom: 15px;
+  }
+}

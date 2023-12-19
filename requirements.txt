@@ -1,0 +1,4 @@
+Flask             # Install Flask
+flask_cors        # Install Flask-CORS to handle Cross-Origin Resource Sharing (CORS)
+Flask-Bcrypt      # Install Flask-Bcrypt for password hashing
+mysql-connector-python  # Install MySQL connector for Python to interact with MySQL databases
