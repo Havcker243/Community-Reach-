@@ -123,7 +123,7 @@ a:visited {
 a:link {
     text-decoration: none;
 }
-
+/***************************************************************************/
 /*Categories styles*/
 
 .main-content {
@@ -151,9 +151,12 @@ a:link {
     padding: 3em 0;
     gap: 2em;
     clear: both;
-    /* justify-content: space-between; Adjust for smaller screens */
+    justify-content:center; /*Adjust for smaller screens*/
 
 }
+
+
+
 
 
 img {
@@ -163,13 +166,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-    .hero-main-page {
-        font-size: 24px;
-        padding: 0 10px;
-    }
-    .main-content h1 {
-        font-size: 30px;
-    }
     nav ul li a {
         font-size: 20px;
     }
@@ -201,15 +197,14 @@ img {
 }
 
 .work .desc h3 {
-  font-size: 20px;
+  font-size: 25px;
   padding: 100px; 
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
   color: #999999;
-  display: block;
-
+  display:block;
 }
 
 
@@ -224,11 +219,6 @@ img {
     transform: translate3d(0, 0, 0);
   }
 
-
-  .section-one, .section-two {
-    justify-content: space-between; /* Adjust for smaller screens */
-}
-
   
 }
 
@@ -242,11 +232,12 @@ img {
 }
 
 .work {
-    display: block;
-    background-size: cover;
-    background-position: center;
+    display:block;
+    background-size:cover;
+    background-position:center;
     height: 250px; /* Adjust as needed */
     position: relative;
     width: 100%; /* Full width of the parent */
+
 }
 /* updating css file*/

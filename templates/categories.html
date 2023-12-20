@@ -1,117 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Category</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/construction.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
     <nav id="nav-bar">
-        <div>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('form') }}">Host Event</a></li>
-                <li><a href="{{ url_for('location') }}">Event Finder</a></li>
-                <li><a href="{{ url_for('events') }}">Events</a></li>
-                <li><a href="{{ url_for('categories') }}">Trending Events</a></li>
-            </ul>
-        </div>
+      <div>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('form') }}">Host Event</a></li>
+          <li><a href="{{ url_for('location') }}">Event Finder</a></li>
+          <li><a href="{{ url_for('events') }}">Events</a></li>
+          <li><a href="{{ url_for('categories') }}">Trending Events</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div class="bg-img" style="margin-top: -17px;">
-        <div class="main-content">
-            <h1>Trending Categories</h1>
+      <div class="main-content">
+        <h1>Trending Categories</h1>
 
-            <div class="section-one">
-                <div class="Animatebox">
-                    <a href="#">
-                        <img src="{{ url_for('static', filename='img/music.jpg') }}" alt="Music">
-                        <div class="desc">
-                            <h3>Music</h3>
-                            <span></span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="Animatebox">
-                    <a href="#">
-                        <img src="{{ url_for('static', filename='img/fitness.jpg') }}" alt="Fitness">
-                        <div class="desc">
-                            <h3>Fitness</h3>
-                            <span></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="section-two">
-                <div class="Animatebox">
-                    <a href="#">
-                        <img src="{{ url_for('static', filename='img/sports.jpg') }}" alt="Sports">
-                        <div class="desc">
-                            <h3>Sports</h3>
-                            <span></span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="Animatebox">
-                    <a href="#">
-                        <img src="{{ url_for('static', filename='img/food.jpg') }}" alt="Food">
-                        <div class="desc">
-                            <h3>Food</h3>
-                            <span></span>
-                        </div>
-                    </a>
-                </div>
-
-                
-                <div class="Animatebox">
-                  <a href="#">
-                      <img src="{{ url_for('static', filename='img/drinks.jpg') }}" alt="Food">
-                      <div class="desc">
-                          <h3>Drinks</h3>
-                          <span></span>
-                      </div>
-                  </a>
-              </div>
-
-                             
-              <div class="Animatebox">
-                <a href="#">
-                    <img src="{{ url_for('static', filename='img/hobbies.jpg') }}" alt="Food">
-                    <div class="desc">
-                        <h3>Hobbies</h3>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-
-                                         
-            <div class="Animatebox">
-              <a href="#">
-                  <img src="{{ url_for('static', filename='img/arts.jpg') }}" alt="Food">
-                  <div class="desc">
-                      <h3>Performing Arts</h3>
-                      <span></span>
-                  </div>
-              </a>
-          </div>
-                                  
+        <div class="section-one">
           <div class="Animatebox">
-            <a href="#">
-                <img src="{{ url_for('static', filename='img/health.jpg') }}" alt="Food">
-                <div class="desc">
-                    <h3>Health</h3>
-                    <span></span>
-                </div>
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/music.jpg);"
+            >
+              <div class="desc">
+                <h3>Music</h3>
+                <span></span>
+              </div>
             </a>
+          </div>
+
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/fitness.jpg);"
+            >
+              <div class="desc">
+                <h3>Fitness</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
         </div>
-            </div>
+
+        <div class="section-two">
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/sports.jpg);"
+            >
+              <div class="desc">
+                <h3>Sports</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/food.jpg);"
+            >
+              <div class="desc">
+                <h3>Food</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/drinks.jpg);"
+            >
+              <div class="desc">
+                <h3>Drinks</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/hobbies.jpg);"
+            >
+              <div class="desc">
+                <h3>Hobbies</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/arts.jpg);"
+            >
+              <div class="desc">
+                <h3>Arts</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="Animatebox">
+            <a
+              href="#"
+              class="work"
+              style="background-image: url(/static/img/health.jpg);"
+            >
+              <div class="desc">
+                <h3>Health</h3>
+                <span></span>
+              </div>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
