@@ -30,17 +30,51 @@ The website operates as a centralized hub for community event information. Its c
 2. Allowing users to host or promote their events to gain more visibility.
 3. Offering a search function to identify events based on location or interest.
 
-## Description
+### Description
 
-### Pages
+## Pages
 
-**Community Reach** consists of five key pages:
+**Community Reach** consists of five key pages, each serving a specific purpose:
 
-1. **Home Page** : The landing page presenting a brief overview of the platform and its features.
-2. **Host an Event Page** : A form page where users can add details about their event, including time, date, and location.
-3. **Location Finder** : A dual-function page. Users can input a location to discover upcoming events. Clicking on a particular event will open Google Maps directions to the event.
-4. **Events Page** : Highlights major community events, ensuring users are always informed about significant happenings around them.
-5. **Mood-based Events** : Suggests events based on a user's intrest , ensuring personalized event suggestions.
+### Home Page
+
+* **Description** : The Home Page serves as the platform's welcoming introduction, providing a brief overview of its features and functionalities.
+* **Key Features** :
+* Overview of the platform.
+* Highlighting key features and benefits.
+* Sign-in options for existing users.(future feature )
+
+### Host an Event Page
+
+* **Description** : The Host an Event Page is designed for users who want to create and promote their events. It's a form-based page where users can provide detailed information about their event.
+* **Key Features** :
+* Event creation form.
+* Input fields for event details: Event name , Event description, event coordinator email , event coordinator email and more .
+* Event submission functionality.
+
+### Location Finder
+
+* **Description** : The Location Finder Page serves a dual function. Users can use it to discover events happening in their desired location, and clicking on a specific event opens directions to that event on Google Maps.
+* **Key Features** :
+* Location search bar.
+* Python script connecting the search bar to the database hosted on AWS.
+* Event listings with links to Google Maps directions.( future feature )
+
+### Events Page
+
+* **Description** : The Events Page is a crucial component of the platform, offering users a comprehensive list of major community events. It ensures users are well-informed about significant happenings in their area.
+* **Key Features** :
+* Event descriptions.
+* Location details with direct links for navigation.
+* Point of contact information( the event name , Id  , date and address ).
+
+### Mood-based Events
+
+* **Description** : The Mood-based Events Page enhances user experience by suggesting events based on a user's interests and mood, providing personalized event recommendations.
+* **Key Features** :
+* Mood-based event suggestions based on pictures
+* Personalized event recommendations tailored to user preferences.( working on that)
+* Enhances user engagement and event discovery.
 
 ## How to Run
 
