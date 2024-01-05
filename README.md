@@ -1,7 +1,6 @@
----
+
+
 # Community Reach
-
-
 
 ## Table of Contents
 
@@ -101,4 +100,3 @@ Our plans for future enhancements include:
 1. Adding real events to the database and also opening it up to university students for real use
 2. Add a login page and make a new account for people to be able to make new accounts for the website  for security efficnecy using  firebase
 3. Add a table to store email, username , and password in database
----
