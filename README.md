@@ -1,5 +1,3 @@
-
-
 # Community Reach
 
 ## Table of Contents
@@ -41,6 +39,8 @@ The website operates as a centralized hub for community event information. Its c
 * Highlighting key features and benefits.
 * Sign-in options for existing users.(future feature )
 
+![1704745104591](image/README/1704745104591.png)
+
 ### Host an Event Page
 
 * **Description** : The Host an Event Page is designed for users who want to create and promote their events. It's a form-based page where users can provide detailed information about their event.
@@ -48,22 +48,24 @@ The website operates as a centralized hub for community event information. Its c
 * Event creation form.
 * Input fields for event details: Event name , Event description, event coordinator email , event coordinator email and more .
 * Event submission functionality.
+* ![1704747729879](image/README/1704747729879.png)
 
-### Location Finder
+### EventFinder
 
 * **Description** : The Location Finder Page serves a dual function. Users can use it to discover events happening in their desired location, and clicking on a specific event opens directions to that event on Google Maps.
 * **Key Features** :
 * Location search bar.
 * Python script connecting the search bar to the database hosted on AWS.
 * Event listings with links to Google Maps directions.( future feature )
+* ![1704745176484](image/README/1704745176484.png)
 
 ### Events Page
 
-* **Description** : The Events Page is a crucial component of the platform, offering users a comprehensive list of major community events. It ensures users are well-informed about significant happenings in their area.
+* **Description** : The Events Page is a crucial component of the platform, offering users a comprehensive list of 9 of the earliest community events. It ensures users are well-informed about significant happenings in their area.
 * **Key Features** :
 * Event descriptions.
 * Location details with direct links for navigation.
-* Point of contact information( the event name , Id  , date and address ).
+* Point of contact information( the event name , Id  , date and address ).'
 
 ### Mood-based Events
 
@@ -72,6 +74,8 @@ The website operates as a centralized hub for community event information. Its c
 * Mood-based event suggestions based on pictures
 * Personalized event recommendations tailored to user preferences.( working on that)
 * Enhances user engagement and event discovery.
+
+  ![1704747789810](image/README/1704747789810.png)
 
 ## How to Run
 
